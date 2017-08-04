@@ -32,7 +32,7 @@
 #include <hector_nav_msgs/GetRobotTrajectory.h>
 #include <geometry_msgs/Twist.h>
 #include <cmath>
-const float vel_factor = 0.07;
+const float vel_factor = 0.18;
 
 class SimpleExplorationController
 {
@@ -97,9 +97,9 @@ public:
 		else
 			twist.angular.z -= 2 * M_PI;
 	}
-	twist.linear.x *= vel_factor;
-	twist.linear.y *= -vel_factor * 1.2;
-	twist.angular.z *= vel_factor* 1.3;
+	twist.linear.x *= vel_factor * 0.6;
+	twist.linear.y *= -vel_factor * 0.8;
+	twist.angular.z *= vel_factor;
 
 	ROS_ERROR("[hector_exploration_controller] vel pub %lf %lf ==>%lf", twist.linear.x, twist.linear.y ,twist.angular.z);
     vel_pub_.publish(twist);

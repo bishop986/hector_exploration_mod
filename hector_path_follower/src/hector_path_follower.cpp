@@ -46,8 +46,8 @@ namespace pose_follower {
     node_private.param("k_rot", K_rot_, 2.0);
 
     node_private.param("tolerance_trans", tolerance_trans_, 0.1);
-    node_private.param("tolerance_rot", tolerance_rot_, 0.2);
-    node_private.param("tolerance_timeout", tolerance_timeout_, 0.5);
+    node_private.param("tolerance_rot", tolerance_rot_, 0.4);
+    node_private.param("tolerance_timeout", tolerance_timeout_, 0.1);
 
     node_private.param("holonomic", holonomic_, true);
 
@@ -58,8 +58,8 @@ namespace pose_follower {
 
     node_private.param("min_vel_lin", min_vel_lin_, 0.1);
     node_private.param("min_vel_th", min_vel_th_, 0.0);
-    node_private.param("min_in_place_vel_th", min_in_place_vel_th_, 0.0);
-    node_private.param("in_place_trans_vel", in_place_trans_vel_, 0.0);
+    node_private.param("min_in_place_vel_th", min_in_place_vel_th_, 0.03);
+    node_private.param("in_place_trans_vel", in_place_trans_vel_, 0.06);
 
     node_private.param("trans_stopped_velocity", trans_stopped_velocity_, 1e-4);
     node_private.param("rot_stopped_velocity", rot_stopped_velocity_, 1e-4);
